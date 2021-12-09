@@ -1,0 +1,28 @@
+
+
+<h1 class="text-dark text-center" >The most searched categories</h1>
+
+<div class="d-inline d-md-flex text-dark">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+    <li ngbNavItem="top">
+      <a ngbNavLink>Top</a>
+      <ng-template ngbNavContent>
+       <app-cards-list designClass="row row-cols-1 row-cols-md-2 row-cols-lg-3"></app-cards-list>
+      </ng-template>
+    </li>
+    <li ngbNavItem="middle">
+      <a ngbNavLink>Middle</a>
+      <ng-template ngbNavContent>
+        <app-cards-list designClass="row row-cols-1 row-cols-md-2 row-cols-lg-3"></app-cards-list>
+      </ng-template>
+    </li>
+    <li ngbNavItem="bottom">
+      <a ngbNavLink>Bottom</a>
+      <ng-template ngbNavContent>
+        <app-cards-list designClass="row row-cols-1 row-cols-md-2 row-cols-lg-3"></app-cards-list>
+      </ng-template>
+    </li>
+  </ul>
+
+  <div [ngbNavOutlet]="nav" class="ml-4"></div>
+</div>

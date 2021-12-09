@@ -1,0 +1,32 @@
+
+
+
+<mat-toolbar>
+  <button mat-icon-button class="mr-1" (click)="toggle()" >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <a mat-button routerLink="" >ShopApp</a> <!-- reload -->
+
+  <span class="spacer"></span>
+
+  <button  mat-icon-button color="warn" class="mr-1" routerLink="whishlist" > <!-- redirect to favorites -->
+    <mat-icon>favorite</mat-icon>
+  </button>
+
+  <button mat-icon-button class="mr-1" routerLink="cart" > <!-- redirect to shopping cart -->
+    <mat-icon matBadge="0" >add_shopping_cart</mat-icon>
+  </button>
+
+  <a mat-icon-button routerLink="auth" *ngIf="!isAuthentificated" >  <!-- redirect to login and register -->
+    <mat-icon>perm_identity</mat-icon>
+  </a>
+
+  <span class="spacer"></span>
+
+    <button mat-raised-button (click)="logout()" *ngIf="isAuthentificated" >  <!-- logout -->
+      Logout
+    </button>
+
+
+
+</mat-toolbar>

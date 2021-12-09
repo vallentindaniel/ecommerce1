@@ -1,0 +1,36 @@
+
+
+
+
+<mat-sidenav-container class="sidenav-container bg-light" >
+
+  <mat-sidenav [opened]="show" mode="side">
+
+    <mat-list>
+
+      <mat-list-item>
+        <a mat-button color="accent" routerLink="" >Home</a>
+      </mat-list-item>
+
+      <mat-list-item>
+        <a mat-button color="accent" routerLinkActive="active" routerLink="products" >Products</a>
+      </mat-list-item>
+
+      <mat-list-item>
+        <a mat-button color="accent" routerLinkActive="active" routerLink="my-orders">My Orders</a>
+      </mat-list-item>
+
+    </mat-list>
+
+  </mat-sidenav>
+  <div class="container-fluid">
+    <!-- CONTENT -->
+    <div style="color: black;">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+
+</mat-sidenav-container>
+
+

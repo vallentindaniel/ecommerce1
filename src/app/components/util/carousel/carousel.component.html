@@ -1,0 +1,14 @@
+
+
+<ngb-carousel #carousel [interval]="1000" class="carousel" >
+  <ng-template ngbSlide *ngFor="let slide of slides; index as i">
+    <div class="carousel-caption">
+        <h3>{{slide.message}}</h3>
+    </div>
+    <a  [routerLink]="slide.tag" target="_blank" >
+      <div class="picsum-img-wrapper slide">
+        <img [src]="slide.src" alt="My image {{i + 1}} description"  style="object-fit:fill;" >
+      </div>
+    </a>
+  </ng-template>
+</ngb-carousel>

@@ -1,0 +1,33 @@
+
+<ng-container *ngIf="isLoading" >
+  <mat-spinner></mat-spinner>
+</ng-container>
+
+<div >
+  <h2 class="text-center" >Register</h2>
+
+  <form class="form" [formGroup]="form" (ngSubmit)="register()" *ngIf="!isLoading" >
+
+    <div class="alert alert-danger" *ngIf="error" >
+      <p>{{error}}</p>
+    </div>
+
+    <div class="alert alert-success" *ngIf="message" >
+      <p>{{message}}</p>
+    </div>
+
+    <div class="form-group">
+      <label for="emailR">Email address:</label>
+      <input type="email" class="form-control" placeholder="Enter email" formControlName="email"  id="emailR">
+    </div>
+
+    <div class="form-group">
+      <label for="pwdR">Password:</label>
+      <input type="password" class="form-control" placeholder="Enter password" formControlName="password" id="pwdR">
+    </div>
+
+    <button  class="btn btn-primary" (click)="register()" >Login</button>
+
+  </form>
+
+</div>

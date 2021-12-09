@@ -1,0 +1,21 @@
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.nounderline {
+  text-decoration: none!important;
+  opacity: 0.9;
+}
+
+a:hover{
+  opacity: 1;
+  text-shadow: white 0.5px 0 1px;
+}

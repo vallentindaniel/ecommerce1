@@ -1,0 +1,54 @@
+<section>
+  <!-- product list -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+
+        <div>
+          <h2>Categories</h2>
+          <table class="table table-hover">
+            <tbody>
+
+              <tr *ngFor="let category of categories | async" >
+                <td>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="disp1" id="{{category.categoryID}}"  (change)="filter(category.categoryID)">
+                    <label class="form-check-label" for="{{category.categoryID}}">
+                      {{category.title}}
+                    </label>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="disp1" id="cat1"  (change)="filter('')" checked>
+                    <label class="form-check-label" for="cat1">
+                      Default
+                    </label>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+          <button mat-raised-button color="accent" >Apply</button>
+        </div>
+
+
+      </div>
+      <div class="col">
+        <app-cards-list [items]="products" designClass="row row-cols-1 row-cols-md-2 row-cols-lg-3"  ></app-cards-list>
+      </div>
+      <div class="col-12 mt-2 mb-2">
+        <mat-paginator
+        [length]="100"
+        [pageSize]="12"
+        [pageSizeOptions]="[6, 12, 24]"
+        aria-label="Select page">
+        </mat-paginator>
+      </div>
+    </div>
+  </div>
+</section>

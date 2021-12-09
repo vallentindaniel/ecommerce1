@@ -1,0 +1,27 @@
+
+
+<div *ngIf="designClass" [ngClass]="designClass" >
+
+  <div *ngFor="let product of items  | async "  class="col d-flex mt-2" >
+    <mat-card>
+      <a [routerLink]="['/product', product.path]">
+        <img mat-card-image src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2019/07/Man-Silhouette.jpg" alt="">
+      </a>
+      <mat-card-content>
+        <mat-card-title>
+          <a [routerLink]="['/product', product.path]" class="text-white nounderline" >{{product.title}}</a>
+        </mat-card-title>
+        <mat-card-subtitle>{{product.price}} lei</mat-card-subtitle>
+        <div class="btn-group ">
+          <button mat-mini-fab color="warn" ngbPopover="Saved" [autoClose]="true" [openDelay]="100" [closeDelay]="700"
+          triggers="click:mouseleave" (click)="addToWhishList(product)" >
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-stroked-button color="accent" ngbPopover="Added" [autoClose]="true" [openDelay]="100" [closeDelay]="700"
+          triggers="click:mouseleave" (click)="addToCart(product)" >Add to cart</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>

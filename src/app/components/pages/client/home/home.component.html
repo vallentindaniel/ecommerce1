@@ -1,0 +1,33 @@
+<!--  -->
+<!--  -->
+<section>
+  <!-- carousel -->
+  <div class="container-fluid">
+    <div class="row justify-content-center ">
+      <div class=" col col-sm-9 col-md-8 col-lg-8">
+        <app-carousel [slides]="slides"></app-carousel>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <!-- product list -->
+  <div class="container">
+    <app-cards-list [items]="products" designClass="row row-cols-1 row-cols-sm-2 row-cols-lg-4"></app-cards-list>
+  </div>
+</section>
+
+<section>
+  <!-- product by best category -->
+  <div class="container">
+    <app-tab-filter-products></app-tab-filter-products>
+  </div>
+</section>
+
+<section>
+  <app-ads-images></app-ads-images>
+</section>
+
+<br><br><br><br><br><br><br><br>

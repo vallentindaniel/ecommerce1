@@ -1,0 +1,15 @@
+
+
+      .mat-tab-group.vertical {
+          flex-direction: row;
+      }
+      .mat-tab-group.horizontal {
+          flex-direction: column;
+      }
+      .vertical .mat-tab-labels {
+          flex-direction: column;
+      }
+      .horizontal .mat-tab-labels {
+          flex-direction: row;
+      }
+
